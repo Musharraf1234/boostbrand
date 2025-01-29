@@ -65,6 +65,30 @@
         		background-image: none !important;
         	}
         }
+		
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-250px * 7)); }
+}
+
+.slider {
+    height: 100px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: auto;
+}
+
+.slide-track {
+    animation: scroll 40s linear infinite;
+    display: flex;
+    width: calc(250px * 14);
+}
+
+.slide {
+    height: 100px;
+    width: 250px;
+}
     </style>
     <link rel="icon" href="images/cropped-fav-brand-32x32.png" sizes="32x32">
     <link rel="icon" href="images/cropped-fav-brand-192x192.png" sizes="192x192">
@@ -137,7 +161,38 @@
         	width: 100%;
         	transform-origin:  0% 100%; 
         }
-        
+		.swiper-container {
+    width: 100%;
+    overflow: hidden;
+	margin-bottom: 100px;
+}
+
+.swiper-wrapper {
+    display: flex;
+    transition-timing-function: linear; /* Smooth linear transition */
+}
+
+.swiper-slide {
+    flex-shrink: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-slide-content {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+.title-mark{
+	color: #121212;
+    font-family: "Space Grotesk", Sans-serif;
+    font-size: 140px;
+    font-weight: 500;
+    line-height: 1em;
+}
     </style>
 </head>
 
@@ -189,7 +244,7 @@
                             <div class="elementor-element elementor-element-39f8424 e-con-full e-flex e-con e-child" data-id="39f8424" data-element_type="container" data-settings="{" wcf_enable_cursor_hover_effect_text":"view","wcf-animation":"none"}"="">
                                 <div class="elementor-element elementor-element-6eae9ec elementor-widget elementor-widget-wcf--site-logo" data-id="6eae9ec" data-element_type="widget" data-settings="{" wcf-animation":"none"}"="" data-widget_type="wcf--site-logo.default">
                                     <div class="elementor-widget-container">
-                                        <div class="elementor-image"> <a href="https://crowdytheme.com/wp/arolax/seo-agencey/" aria-label="Site Logo"> <img width="125" height="34" src="images/Logo.svg" class="attachment-full size-full wp-image-978" alt=""> </a> </div>
+                                        <div class="elementor-image"> <a href="https://crowdytheme.com/wp/arolax/seo-agencey/" aria-label="Site Logo"> <img width="125" height="34" src="./bit-removebg-preview.png" class="attachment-full size-full wp-image-978" alt=""> </a> </div>
                                     </div>
                                 </div>
                             </div>
@@ -364,7 +419,7 @@
                                     <div class="elementor-element elementor-element-e18b7c6 e-con-full e-flex e-con e-child" data-id="e18b7c6" data-element_type="container" data-settings="{" wcf_enable_cursor_hover_effect_text":"view","wcf-animation":"none"}"="">
                                         <div class="elementor-element elementor-element-034e5db wcf-t-animation-text_move elementor-widget elementor-widget-heading" data-id="034e5db" data-element_type="widget" data-settings="{" text_transform_origin":"top="" center="" -50","wcf_text_animation":"text_move","text_rotation_di":"y","text_delay":0.15,"text_duration":1,"text_stagger":0.02,"text_on_scroll":"yes","text_rotation":"-80","wcf-animation":"none"}"="" data-widget_type="heading.default">
                                             <div class="elementor-widget-container">
-                                                <h2 class="elementor-heading-title elementor-size-default">DIGITAL</h2>
+                                                <h2 class="elementor-heading-title elementor-size-default">SEO</h2>
                                             </div>
                                         </div>
                                         <div class="elementor-element elementor-element-2132dd8 elementor-widget elementor-widget-wcf--image" data-id="2132dd8" data-element_type="widget" data-settings="{" wcf-animation":"fade","delay":0.5,"ease":"bounce","wcf-image-animation":"none","on-scroll":1,"fade-from":"bottom","data-duration":1.5,"fade-offset":50}"="" data-widget_type="wcf--image.default">
@@ -499,30 +554,49 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="elementor-element elementor-element-b292675 e-flex e-con-boxed e-con e-child" data-id="b292675" data-element_type="container" data-settings="{" wcf_enable_cursor_hover_effect_text":"view","wcf-animation":"none"}"="">
-                            <div class="e-con-inner">
-                                <div class="elementor-element elementor-element-0d5f585 elementor-widget elementor-widget-wcf--brand-slider" data-id="0d5f585" data-element_type="widget" data-settings="{" wcf-animation":"fade","delay":0.15,"on-scroll":1,"fade-from":"bottom","data-duration":1.5,"ease":"power2.out","fade-offset":50}"="" data-widget_type="wcf--brand-slider.default">
-                                    <div class="elementor-widget-container">
-                                        <div class="wcf__slider-wrapper wcf--brand-slider-wrapper " data-settings="{" loop":true,"speed":5000,"allowtouchmove":false,"slidesperview":"6","spacebetween":20,"autoplay":{"delay":1,"disableoninteraction":"true"},"breakpoints":{"767":{"slidesperview":"2","spacebetween":20},"880":{"slidesperview":"4","spacebetween":20},"1024":{"slidesperview":"5","spacebetween":20},"1200":{"slidesperview":"6","spacebetween":20},"1366":{"slidesperview":"6","spacebetween":20},"2400":{"slidesperview":"6","spacebetween":20}}}"="">
-                                            <!-- Slider main container -->
-                                            <div class="wcf__slider swiper" dir="ltr" style="position: static">
-                                                <!-- Additional required wrapper -->
-                                                <div class="swiper-wrapper">
-                                                    <!-- Slides -->
-                                                    <div class="swiper-slide"><img decoding="async" class="swiper-slide-image" src="images/logo-1.webp" alt="logo-1"></div>
-                                                    <div class="swiper-slide"><img decoding="async" class="swiper-slide-image" src="images/logo-2.webp" alt="logo-2"></div>
-                                                    <div class="swiper-slide"><img decoding="async" class="swiper-slide-image" src="images/logo-3.webp" alt="logo-3"></div>
-                                                    <div class="swiper-slide"><img decoding="async" class="swiper-slide-image" src="images/logo-4.webp" alt="logo-4"></div>
-                                                    <div class="swiper-slide"><img decoding="async" class="swiper-slide-image" src="images/logo-5.webp" alt="logo-5"></div>
-                                                    <div class="swiper-slide"><img decoding="async" class="swiper-slide-image" src="images/logo-6.webp" alt="logo-6"></div>
-                                                </div> <!-- navigation and pagination -->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
+					
+<div class="slider">
+	<div class="slide-track">
+		<div class="slide">
+			<img decoding="async" class="swiper-slide-image" src="images/logo-1.webp" alt="logo-1">
+		</div>
+		<div class="slide">
+			<img decoding="async" class="swiper-slide-image" src="images/logo-2.webp" alt="logo-1">
+		</div>
+		<div class="slide">
+			<img decoding="async" class="swiper-slide-image" src="images/logo-3.webp" alt="logo-1">
+		</div>
+		<div class="slide">
+			<img decoding="async" class="swiper-slide-image" src="images/logo-4.webp" alt="logo-1">
+		</div>
+		<div class="slide">
+			<img decoding="async" class="swiper-slide-image" src="images/logo-5.webp" alt="logo-1">
+		</div>
+		<div class="slide">
+			<img decoding="async" class="swiper-slide-image" src="images/logo-6.webp" alt="logo-1">
+		</div>
+		<div class="slide">
+			<img decoding="async" class="swiper-slide-image" src="images/logo-1.webp" alt="logo-1">
+		</div>
+		<div class="slide">
+			<img decoding="async" class="swiper-slide-image" src="images/logo-2.webp" alt="logo-1">
+		</div>
+		<div class="slide">
+			<img decoding="async" class="swiper-slide-image" src="images/logo-3.webp" alt="logo-1">
+		</div>
+		<div class="slide">
+			<img decoding="async" class="swiper-slide-image" src="images/logo-4.webp" alt="logo-1">
+		</div>
+		<div class="slide">
+			<img decoding="async" class="swiper-slide-image" src="images/logo-5.webp" alt="logo-1">
+		</div>
+		<div class="slide">
+			<img decoding="async" class="swiper-slide-image" src="images/logo-6.webp" alt="logo-1">
+		</div>
+	</div>
+</div>
                     <div class="elementor-element elementor-element-a6c382c e-con-full e-flex e-con e-parent" data-id="a6c382c" data-element_type="container" data-settings="{" wcf_enable_cursor_hover_effect_text":"view","wcf-animation":"none"}"="">
                         <div class="elementor-element elementor-element-18c6790 e-flex e-con-boxed e-con e-child" data-id="18c6790" data-element_type="container" data-settings="{" wcf_enable_cursor_hover_effect_text":"view","wcf-animation":"none"}"="">
                             <div class="e-con-inner">
@@ -1311,33 +1385,43 @@
                             </div>
                         </div>
                     </div>
-                    <div class="elementor-element elementor-element-99f0ce1 e-con-full e-flex e-con e-parent" data-id="99f0ce1" data-element_type="container" data-settings="{" wcf_enable_cursor_hover_effect_text":"view","wcf-animation":"none"}"="">
-                        <div class="elementor-element elementor-element-95ade95 text-lg-title elementor-widget elementor-widget-wcf--brand-slider" data-id="95ade95" data-element_type="widget" data-settings="{" wcf-animation":"fade","delay":0.15,"on-scroll":1,"fade-from":"bottom","data-duration":1.5,"ease":"power2.out","fade-offset":50}"="" data-widget_type="wcf--brand-slider.default">
-                            <div class="elementor-widget-container">
-                                <div class="wcf__slider-wrapper wcf--brand-slider-wrapper " data-settings="{" loop":true,"speed":10000,"allowtouchmove":false,"slidesperview":"1","spacebetween":20,"autoplay":{"delay":1,"disableoninteraction":"true"},"breakpoints":{"767":{"slidesperview":"1","spacebetween":20},"880":{"slidesperview":"1","spacebetween":20},"1024":{"slidesperview":"1","spacebetween":20},"1200":{"slidesperview":"1","spacebetween":20},"1366":{"slidesperview":"1","spacebetween":20},"2400":{"slidesperview":"1","spacebetween":20}}}"="">
-                                    <!-- Slider main container -->
-                                    <div class="wcf__slider swiper" dir="ltr" style="position: static">
-                                        <!-- Additional required wrapper -->
-                                        <div class="swiper-wrapper">
-                                            <!-- Slides -->
-                                            <div class="swiper-slide">
-                                                <div class="text-slide-content">
-                                                    <div class="title">marketing.strategy.</div>
-                                                    <div class="elementor-icon"></div>
-                                                </div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="text-slide-content">
-                                                    <div class="title">marketing.strategy.</div>
-                                                    <div class="elementor-icon"></div>
-                                                </div>
-                                            </div>
-                                        </div> <!-- navigation and pagination -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                   
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<!-- Slides -->
+							<div class="swiper-slide">
+								<div class="text-slide-content">
+									<div class="title-mark">marketing.strategy.</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="text-slide-content">
+									<div class="title-mark">marketing.strategy.</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="text-slide-content">
+									<div class="title-mark">marketing.strategy.</div>
+								</div>
+							</div>
+							<!-- Duplicate slides for seamless looping -->
+							<div class="swiper-slide">
+								<div class="text-slide-content">
+									<div class="title-mark">marketing.strategy.</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="text-slide-content">
+									<div class="title-mark">marketing.strategy.</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="text-slide-content">
+									<div class="title-mark">marketing.strategy.</div>
+								</div>
+							</div>
+						</div>
+					</div>
                     <div class="elementor-element elementor-element-054585a e-con-full e-flex e-con e-parent" data-id="054585a" data-element_type="container" data-settings="{" wcf_enable_cursor_hover_effect_text":"view","wcf-animation":"none"}"="">
                         <div class="elementor-element elementor-element-9ccbda4 e-con-full e-flex e-con e-child" data-id="9ccbda4" data-element_type="container" data-settings="{" wcf_enable_cursor_hover_effect_text":"view","wcf-animation":"none"}"="">
                             <div class="elementor-element elementor-element-efd3a01 wcf-t-animation-text_move elementor-widget elementor-widget-wcf--title" data-id="efd3a01" data-element_type="widget" data-settings="{" text_transform_origin":"top="" center="" -50","wcf_text_animation":"text_move","text_delay":0.15,"text_duration":1,"text_stagger":0.02,"text_on_scroll":"yes","text_rotation_di":"x","text_rotation":"-80","wcf-animation":"none"}"="" data-widget_type="wcf--title.default">
@@ -1581,10 +1665,27 @@
         .wcf-cursor {width: px;height: px;border-color: #FFFFFF;mix-blend-mode: difference;}.wcf-cursor-follower {width: px;height: px;background-color: #FFFFFF;mix-blend-mode: difference;}
     </style>
     <link rel="stylesheet" id="wpo_min-footer-0-css" href="css/wpo-minify-footer-e662424b.min.css" type="text/css" media="all">
+	<script>
+	document.addEventListener('DOMContentLoaded', function () {
+    const swiper = new Swiper('.swiper-container', {
+        loop: true, // Enable infinite loop
+        autoplay: {
+            delay: 0, // No delay between slides
+            disableOnInteraction: false, // Continue autoplay even after user interaction
+        },
+        speed: 5000, // Adjust speed for smooth continuous sliding
+        slidesPerView: 'auto', // Allow multiple slides to be visible
+        spaceBetween: 0, // No space between slides
+        freeMode: true, // Enable free mode for continuous sliding
+        freeModeMomentum: false, // Disable momentum to prevent stopping
+    });
+});
+	</script>
     <script type="text/javascript" id="arolax-essential--global-core-js-extra">
         /* <![CDATA[ */
         var AROLAX_ADDONS_JS = {"ajaxUrl":"https:\/\/crowdytheme.com\/wp\/arolax\/seo-agencey\/wp-admin\/admin-ajax.php","_wpnonce":"8bfdc5bac9"};
         /* ]]> */
+
     </script>
     <script type="text/javascript" src="js/wcf--global-core.min.js" id="arolax-essential--global-core-js"></script>
     <script type="text/javascript" id="wcf--addons-js-extra">
